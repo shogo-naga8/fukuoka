@@ -71,10 +71,51 @@
 
 .rogo_title{
   font-family: fantasy;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
   text-align: center;
   padding-top: 30px;
-  
 }
 
+
+.btn-vertical-border {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 7px 19px 8px 30px;
+  text-decoration: none;
+  color:#ff9900;
+  font-family: fantasy;
+  font-size: 40px;
+  transition: .4s;
+  left: 260px;
+}
+
+.btn-vertical-border:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 5px;
+  height: 80%;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  background:#ff9900;
+}
+
+.btn-vertical-border:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 5px;
+  height: 80%;
+  top:0;
+  left: 100%;
+  border-radius: 3px;
+  background:#ff9900;
+}
+
+.btn-vertical-border:hover:before, .btn-vertical-border:hover:after {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
