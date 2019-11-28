@@ -1,0 +1,25 @@
+.wrapper
+  .main-header
+    .main-center
+  .main-c
+    .Lineup_view
+    .LineupSection__header  
+      .LineupSection
+        %span Food
+    -# .carousel{"data-flickity" => "{ \"freeScroll\": true, \"wrapAround\": true }"}
+    -# .carousel-cell
+    -# .carousel-cell
+    -# .carousel-cell
+    -# .carousel-cell
+    -# .carousel-cell
+    .flickity-viewport{:style => "height: 506.5px; touch-action: pan-y;"}
+  .flickity-slider{:style => "left: 0px; transform: translateX(-1032px);"}
+    %section
+    .flickity-slider{:style => "left: 0px; transform: translateX(129px);"}
+  %section.Food__carouselItem.is-selected{:style => "position: absolute; left: 0px;"}
+    %img.Food__image{:alt => "", :src => "./assets/images/fukuoka/food_01.jpg"}/
+
+  .main-footer 
+    &copy; 2019 nagase
+.main-footer_logo
+  = image_tag "福岡ロゴ.png", size: "59x59"
