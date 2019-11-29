@@ -6,20 +6,34 @@
     .LineupSection__header  
       .LineupSection
         %span Food
-    -# .carousel{"data-flickity" => "{ \"freeScroll\": true, \"wrapAround\": true }"}
-    -# .carousel-cell
-    -# .carousel-cell
-    -# .carousel-cell
-    -# .carousel-cell
-    -# .carousel-cell
-    .flickity-viewport{:style => "height: 506.5px; touch-action: pan-y;"}
-  .flickity-slider{:style => "left: 0px; transform: translateX(-1032px);"}
-    %section
-    .flickity-slider{:style => "left: 0px; transform: translateX(129px);"}
-  %section.Food__carouselItem.is-selected{:style => "position: absolute; left: 0px;"}
-    %img.Food__image{:alt => "", :src => "./assets/images/fukuoka/food_01.jpg"}/
+    .bx-wrapper
+      .bx-viewport
+        .bxslider
+          .bx-clone
+            = image_tag "福岡ロゴ.png", size: "300x300"
+            .food_type きんぎょ
+            %span 鍋が美味しい
+            
+          %li.bx-clone
+            = image_tag "02-heavy-paper.png", size: "300x300"
+          %li.bx-clone
+            = image_tag "04-polish-wood.png", size: "300x300"
+          %li
+            = image_tag "福岡ロゴ.png", size: "300x300"
+      -# .bx-controls.bx-has-pager.bx-has-controls-direction
+      -#   .bx-pager.bx-default-pager
+      -#     .bx-pager-item
+      -#       %a.bx-pager-link{"data-slide-index" => "0", :href => ""} 1
+      -#     .bx-pager-item
+      -#       %a.bx-pager-link{"data-slide-index" => "1", :href => ""} 2
+      -#     .bx-pager-item
+      -#       %a.bx-pager-link.active{"data-slide-index" => "2", :href => ""} 3
+      -#   .bx-controls-direction
+      -#     %a.bx-prev{:href => ""} Prev
+      -#     %a.bx-next{:href => ""} Next
 
   .main-footer 
     &copy; 2019 nagase
 .main-footer_logo
   = image_tag "福岡ロゴ.png", size: "59x59"
+
