@@ -7,12 +7,12 @@ body {
   margin: 0;
 }
 .wrapper{
- background-color: tomato;
+ background-color:#fff;
  height: 95%;
  width: 100%;
 }
 .main-header{
-background-color:gray;
+background-color:lightblue;
 height: 150px;
 width: 100%;
 }
@@ -29,6 +29,7 @@ width: 100%;
   width: 80%;
   margin: 0 auto;
   top: 400px;
+  overflow: scroll;
 }
 
 .LineupSection__header {
@@ -49,7 +50,7 @@ width: 100%;
   font-size: 20px;
   letter-spacing: .24em;
 }
-span {
+span{
   padding-top: 0;
   line-height: 30px;
   font-size: 20px;
