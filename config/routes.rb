@@ -3,6 +3,8 @@ Rails.application.routes.draw do
  
     root 'maps#index'
 
-    resources :maps
+    resources :maps, only: [:index, :create, :show, ]
+      resources :map,only: [:index]
+
     
 end
