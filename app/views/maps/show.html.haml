@@ -1,7 +1,14 @@
 .wrapper
-  .main-header
-    .main-center
-  .main-c
+  .main_header
+    .main_center
+      .main_title  
+        %spa Fukuoka Naiv
+        .main_about
+          = link_to "about", 'map_index_path',class:"about_btn"
+          .main_about_line
+        .main_random
+          = link_to "今日のおすすめ", '#',class:"今日のおすすめ_btn"
+  .main_c
     .Lineup_view
     .LineupSection__header  
       .LineupSection
@@ -10,30 +17,105 @@
       .bx-viewport
         .bxslider
           .bx-clone
-            = image_tag "福岡ロゴ.png", size: "300x300"
-            .food_type きんぎょ
-            %span 鍋が美味しい
-            
-          %li.bx-clone
-            = image_tag "02-heavy-paper.png", size: "300x300"
-          %li.bx-clone
-            = image_tag "04-polish-wood.png", size: "300x300"
-          %li
-            = image_tag "福岡ロゴ.png", size: "300x300"
-      -# .bx-controls.bx-has-pager.bx-has-controls-direction
-      -#   .bx-pager.bx-default-pager
-      -#     .bx-pager-item
-      -#       %a.bx-pager-link{"data-slide-index" => "0", :href => ""} 1
-      -#     .bx-pager-item
-      -#       %a.bx-pager-link{"data-slide-index" => "1", :href => ""} 2
-      -#     .bx-pager-item
-      -#       %a.bx-pager-link.active{"data-slide-index" => "2", :href => ""} 3
-      -#   .bx-controls-direction
-      -#     %a.bx-prev{:href => ""} Prev
-      -#     %a.bx-next{:href => ""} Next
+            = image_tag "金魚.jpg", size: "350x350"
+            .shop_name きんぎょ 
+            %li.shop_name_t
+              = link_to "http://google.com" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              もつ鍋と刺身が美味しく落ち着いた雰囲気のお店。
+              お通しは金魚を模したプチトマトが可愛く見た目がキレイ。
+          .bx-clone
+            = image_tag "雷橋.jpg", size: "350x350"
+            .shop_name 炉ばた雷橋
+            %p.shop_name_comment 
+              カウンター12席しかないため予約必須。
+              全て目の前で焼いてくれるので見張ることなく気楽に食べれる。
+              系列店の肉の雷橋も美味しいです。
+          .bx-clone
+            = image_tag "魚男.jpg", size: "350x350"
+            .shop_name 博多炉端 魚男 
+            %p.shop_name_comment 
+              鮮魚が自慢の店で夜は居酒屋、昼は魚を使った定食が人気。
+              インスタ映えする料理もある。
+          .bx-clone
+            = image_tag "とりかわ.jpg", size: "350x350"
+            .shop_name とりかわ 粋恭
+            %p.shop_name_comment 
+              かりかりしっとりしたとりかわが有名の焼き鳥屋。
+              豚バラも絶品。
+          .bx-clone
+            = image_tag "喜人.jpg", size: "350x350"
+            .shop_name 居座火家 喜人
+            %p.shop_name_comment 
+              京風の創作料理で人気のお店。大将の趣味でBGMは椎名林檎の曲しか流れていない。
+              ご本人も来店されたとか。
+          .bx-clone
+            = image_tag "ねじけもん.jpg", size: "350x350"
+            .shop_name 野菜巻き串屋 ねじけもん 
+            %p.shop_name_comment 
+              創作串焼きが楽しめるお店。串の種類も豊富で色々な味を楽しめる。
+          .bx-clone
+            = image_tag "とり福.jpg", size: "350x350"
+            .shop_name とり福
+            %p.shop_name_comment
+              六本松の老舗の焼鳥屋さん。レトロ感漂う店内で味は絶品。
+              個人的にはここの焼き豚足がおすすめです。
+          .bx-clone
+            = image_tag "三馬力.jpg", size: "350x350"
+            .shop_name 三馬力＋１／２
+            %p.shop_name_comment 
+              飯倉2丁目にある焼肉屋。店内の煙モクモクになります。
+              三馬力ステーキは是非食べて下さい。
+          .bx-clone
+            = image_tag "塚本.jpg", size: "350x350"
+            .shop_name 塚本鮮魚店
+            %p.shop_name_comment 
+              糸島市加布里にあるお店。
+              おすすめは特上海鮮丼で限定20食なので開店待ちするべし。     
+          .bx-clone
+            = image_tag "肉の雷橋.jpg", size: "350x350"
+            .shop_name 肉の雷橋
+            %p.shop_name_comment 
+              店内はコの字カウンターのみです。
+              牛・豚・鶏などの色々な部位を味わえますが迷った時は『肉盛』を頼みましょう。
+              系列店の炉ばた雷橋も美味しいです。
+          .bx-clone
+            = image_tag "正福.jpg", size: "350x350"
+            .shop_name 味の正福
+            %p.shop_name_comment 
+              福岡で美味しいお魚定食を食べるとしたらここです。
+              ごはんのおかわりが無料！！。ランチ時には行列ができる。。
+          .bx-clone
+            = image_tag "肉うどん.jpg", size: "350x350"
+            .shop_name 肉肉うどん
+            %p.shop_name_comment  
+              北九州発祥で40年以上親しまれている肉うどん。
+              濃いつゆとたっぷりの生姜のパンチがGOOD！！。
+          .bx-clone
+            = image_tag "満月堂.jpg", size: "350x350"
+            .shop_name 満月堂
+            %p.shop_name_comment  
+              変わり種のあるおでん屋さん。
+              上品な味付けと出汁が効いていて美味しい。
 
-  .main-footer 
-    &copy; 2019 nagase
-.main-footer_logo
-  = image_tag "福岡ロゴ.png", size: "59x59"
+
+
+              
+
+
+        
+          .navi-btn
+         
+
+
+    .main_footer 
+      &copy; 2019 nagase
+      .main_footer_logo
+        = image_tag "福岡ロゴ.png", size: "59x59"
+
+
+
+
+
 

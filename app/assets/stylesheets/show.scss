@@ -7,26 +7,68 @@ body {
   margin: 0;
 }
 .wrapper{
- background-color:#fff;
- height: 95%;
- width: 100%;
+ background-color:red;
+ 
 }
-.main-header{
+.main_header{
 background-color:lightblue;
-height: 150px;
+height: 130px;
 width: 100%;
 }
 
-.main-center{
+.main_center{
   background-color: greenyellow;
-  height: 120px;
+  height: 100px;
   width: 100%;
+  padding: 20px;
+}
+.main_title{
+  font-family: fantasy;
+  font-size: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
   
 }
-.main-c{
-  background-color:gray;
-  height: 580px;
-  width: 80%;
+
+.main_about{
+font-size: 30px;
+padding-top: 20px;
+}
+
+.about_btn{
+  text-decoration: none;
+  color:  #000;
+  font-weight: bold; 
+}
+
+.about_btn:hover{
+color: #fff;
+
+}
+
+
+.main_random{
+  font-family:'arial unicode ms';
+  font-size: 25px;
+  padding-right: 200px;
+}
+
+.今日のおすすめ_btn{
+  text-decoration: none;
+  color:  #000;
+}
+
+
+.今日のおすすめ_btn:hover{
+  color: #fff;
+  }
+  
+
+.main_c{
+  background-color:#fff;
+  height: 700px;
+  width: 95%;
   margin: 0 auto;
   top: 400px;
   overflow: scroll;
@@ -57,37 +99,45 @@ span{
   font-family: 'Comic Sans MS';
 }
 
-.main-footer{
+.shop_name {
+  font-family:'arial unicode ms';
+  width: 350px;
+  font-size: 25px;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.shop_name_comment {
+  font-family:'arial unicode ms';
+  width: 350px;
+  border: 0 solid #000;
+  border-top-width: 2px;
+  padding-top: 5px;
+}
+
+.fa-external-link-alt {
+  color:red;
+  font-size: 1.2em 
+  // display: flex;
+  // justify-content: space-between;
+
+}
+
+.link_btn{
+  display:none;
+ 
+}
+
+
+.main_footer{
   background-image: url("02-heavy-paper.png");
   height: 70px;
-  widows: 50%;
+  widows: 100%;
   font-family: fantasy;
   font-size: 20px;
   text-align: center;
  padding: 20px;
 }
-.main-footer_logo{
+.main_footer_logo{
   float:right;
-}
-
-.carousel {
-  background: #FAFAFA;
-}
-
-.carousel-cell {
-  width: 66%;
-  height: 100px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
-}
-
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
 }
