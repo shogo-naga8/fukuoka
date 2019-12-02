@@ -59,3 +59,4 @@ gem 'erb2haml'
 gem 'carrierwave'
 
 gem 'font_awesome5_rails'
+
