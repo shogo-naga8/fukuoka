@@ -1,26 +1,25 @@
 .wrapper
   .main_header
-    .main_center
+    .main_header_b
       .main_title  
-        %spa Fukuoka Naiv
+        %spa Fukuoka Navi
         .main_about
-          = link_to "about", 'map_index_path',class:"about_btn"
-          .main_about_line
+          = link_to "about", '#',class:"main_about_btn"
         .main_random
-          = link_to "今日のおすすめ", '#',class:"今日のおすすめ_btn"
-  .main_c
+          = link_to "今日のおすすめ", '#',class:"main_random_btn"
+  .main_center
     .Lineup_view
-    .LineupSection__header  
-      .LineupSection
+    .LineupSection_header  
+      .LineupSection_header_name
         %span Food
-    .bx-wrapper
+    .bx_wrapper
       .bx-viewport
         .bxslider
           .bx-clone
             = image_tag "金魚.jpg", size: "350x350"
             .shop_name きんぎょ 
-            %li.shop_name_t
-              = link_to "http://google.com" do
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40003252/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               もつ鍋と刺身が美味しく落ち着いた雰囲気のお店。
@@ -28,6 +27,9 @@
           .bx-clone
             = image_tag "雷橋.jpg", size: "350x350"
             .shop_name 炉ばた雷橋
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400103/40022410/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               カウンター12席しかないため予約必須。
               全て目の前で焼いてくれるので見張ることなく気楽に食べれる。
@@ -35,77 +37,244 @@
           .bx-clone
             = image_tag "魚男.jpg", size: "350x350"
             .shop_name 博多炉端 魚男 
+            %li.shop_name_link
+              = link_to "http://www.m-and-co.net/fishman/index.html", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.facebook.com/MCo-269402139860692/", target: "_blank" do
+                = fa_icon 'facebook', class: "fab_fa-facebook"
             %p.shop_name_comment 
               鮮魚が自慢の店で夜は居酒屋、昼は魚を使った定食が人気。
               インスタ映えする料理もある。
           .bx-clone
             = image_tag "とりかわ.jpg", size: "350x350"
             .shop_name とりかわ 粋恭
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40000336/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               かりかりしっとりしたとりかわが有名の焼き鳥屋。
               豚バラも絶品。
           .bx-clone
             = image_tag "喜人.jpg", size: "350x350"
             .shop_name 居座火家 喜人
+            %li.shop_name_link
+              = link_to "https://kijin.owst.jp/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               京風の創作料理で人気のお店。大将の趣味でBGMは椎名林檎の曲しか流れていない。
               ご本人も来店されたとか。
           .bx-clone
-            = image_tag "ねじけもん.jpg", size: "350x350"
+            = image_tag "ねじけもん.png", size: "350x350"
             .shop_name 野菜巻き串屋 ねじけもん 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028622/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.instagram.com/nejikemon/", target: "_blank" do
+                = fa_icon 'instagram', class: "fab_fa-instagram"
             %p.shop_name_comment 
               創作串焼きが楽しめるお店。串の種類も豊富で色々な味を楽しめる。
           .bx-clone
             = image_tag "とり福.jpg", size: "350x350"
             .shop_name とり福
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400105/40007600/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment
               六本松の老舗の焼鳥屋さん。レトロ感漂う店内で味は絶品。
               個人的にはここの焼き豚足がおすすめです。
           .bx-clone
             = image_tag "三馬力.jpg", size: "350x350"
             .shop_name 三馬力＋１／２
+            %li.shop_name_link
+              = link_to "http://sanbariki.weebly.com/index.html", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://ja-jp.facebook.com/sanbariki%20/", target: "_blank" do
+                = fa_icon 'facebook', class: "fab_fa-facebook"
             %p.shop_name_comment 
               飯倉2丁目にある焼肉屋。店内の煙モクモクになります。
               三馬力ステーキは是非食べて下さい。
           .bx-clone
             = image_tag "塚本.jpg", size: "350x350"
             .shop_name 塚本鮮魚店
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4009/A400901/40006148/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               糸島市加布里にあるお店。
               おすすめは特上海鮮丼で限定20食なので開店待ちするべし。     
           .bx-clone
-            = image_tag "肉の雷橋.jpg", size: "350x350"
+            = image_tag "肉.jpg", size: "350x350"
             .shop_name 肉の雷橋
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400103/40038900/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               店内はコの字カウンターのみです。
               牛・豚・鶏などの色々な部位を味わえますが迷った時は『肉盛』を頼みましょう。
               系列店の炉ばた雷橋も美味しいです。
           .bx-clone
-            = image_tag "正福.jpg", size: "350x350"
+            = image_tag "味の正福.jpg", size: "350x350"
             .shop_name 味の正福
+            %li.shop_name_link
+              = link_to "http://www.masafuku.com/index.html", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
               福岡で美味しいお魚定食を食べるとしたらここです。
-              ごはんのおかわりが無料！！。ランチ時には行列ができる。。
+              ごはんのおかわりが無料！！。ランチ時には行列ができる。
           .bx-clone
-            = image_tag "肉うどん.jpg", size: "350x350"
+            = image_tag "肉肉うどん.png", size: "350x350"
             .shop_name 肉肉うどん
+            %li.shop_name_link
+              = link_to "http://nikunikuudon.co.jp/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.facebook.com/%E8%82%89%E8%82%89%E3%81%86%E3%81%A9%E3%82%93-149147228558757/?ref=nf&hc_ref=ARSAkoUzJsa-vPx3o8iFCPWZenRrgrrnzMFRa4Pcf5M6B2h04dW3hggqWFarKUHsqWE", target: "_blank" do
+                = fa_icon 'facebook', class: "fab_fa-facebook"
             %p.shop_name_comment  
               北九州発祥で40年以上親しまれている肉うどん。
               濃いつゆとたっぷりの生姜のパンチがGOOD！！。
           .bx-clone
             = image_tag "満月堂.jpg", size: "350x350"
             .shop_name 満月堂
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028792/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.instagram.com/mangetsudoh_imaizumi/", target: "_blank" do
+                = fa_icon 'instagram', class: "fab_fa-instagram"
             %p.shop_name_comment  
               変わり種のあるおでん屋さん。
               上品な味付けと出汁が効いていて美味しい。
-            .navi-btn
-              = image_tag "左.jpg", size: "100x100"
+  .main_center
+    .Lineup_view
+    .LineupSection_header  
+      .LineupSection_header_name
+        %span tourist spot
+    .bx_wrapper
+      .bx-viewport
+        .bxslider
+          .bx-clone
+            = image_tag "タワー.png", size: "350x350"
+            .shop_name 福岡タワー
+            %li.shop_name_link
+              = link_to "https://www.fukuokatower.co.jp/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.instagram.com/fukuokatower_official/", target: "_blank" do
+                = fa_icon 'instagram', class: "fab_fa-instagram"
+            %p.shop_name_comment 
+              福岡市西副都心のシンボル的存在。。8000枚ものハーフミラーで覆われた正三角形のシャープな外観は「ミラーセイル」の愛称で親しまれている。
+          .bx-clone
+            = image_tag " ", size: "350x350"
+            .shop_name 中洲屋台街
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400103/40022410/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              
+          .bx-clone
+            = image_tag " ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "http://www.m-and-co.net/fishman/index.html", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.facebook.com/MCo-269402139860692/", target: "_blank" do
+                = fa_icon 'facebook', class: "fab_fa-facebook"
+            %p.shop_name_comment 
+              
+
+          .bx-clone
+            = image_tag "  ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40000336/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              
+          .bx-clone
+            = image_tag "  ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://kijin.owst.jp/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              
+          .bx-clone
+            = image_tag "  ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028622/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.instagram.com/nejikemon/", target: "_blank" do
+                = fa_icon 'instagram', class: "fab_fa-instagram"
+            %p.shop_name_comment 
+             
+          .bx-clone
+            = image_tag "  ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400105/40007600/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment
+              
+
+          .bx-clone
+            = image_tag " ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "http://sanbariki.weebly.com/index.html", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://ja-jp.facebook.com/sanbariki%20/", target: "_blank" do
+                = fa_icon 'facebook', class: "fab_fa-facebook"
+            %p.shop_name_comment 
+              
+
+          .bx-clone
+            = image_tag "  ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4009/A400901/40006148/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
 
 
-    .main_footer 
-      &copy; 2019 nagase
-      .main_footer_logo
-        = image_tag "福岡ロゴ.png", size: "59x59"
+          .bx-clone
+            = image_tag " ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400103/40038900/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              
+          .bx-clone
+            = image_tag "  ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "http://www.masafuku.com/index.html", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              
+          .bx-clone
+            = image_tag " ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "http://nikunikuudon.co.jp/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.facebook.com/%E8%82%89%E8%82%89%E3%81%86%E3%81%A9%E3%82%93-149147228558757/?ref=nf&hc_ref=ARSAkoUzJsa-vPx3o8iFCPWZenRrgrrnzMFRa4Pcf5M6B2h04dW3hggqWFarKUHsqWE", target: "_blank" do
+                = fa_icon 'facebook', class: "fab_fa-facebook"
+            %p.shop_name_comment  
+              
+
+          .bx-clone
+            = image_tag " ", size: "350x350"
+            .shop_name 
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028792/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+              = link_to "https://www.instagram.com/mangetsudoh_imaizumi/", target: "_blank" do
+                = fa_icon 'instagram', class: "fab_fa-instagram"
+            %p.shop_name_comment  
+              
+       
+  .main_footer 
+    &copy; 2019 nagase
 
 
 
