@@ -1,13 +1,12 @@
 .wapper
   .title
-    %video.Hero__video{:autoplay => "", "data-object-fit" => "cover", :loop => "", :muted => "", :playsinline => "", :src => "https://ak3.picdn.net/shutterstock/videos/31216543/preview/stock-footage-fukuoka-japan-skyline-and-tower.mp4", "webkit-playsinline" => ""}
-    .Hero__inner
-      .box17
-        .rogo
-          .rogo_t
-            .rogo_title 
-              %a.rogo_title Fukuoka Naiv
-              .btn-vertical-border
-                = link_to "Enter", 'maps/show',class:"Enter_btn", data: {"turbolinks" => false}
-              
+    %video.back_video{autoplay: "", "data-object-fit" => "cover", loop: "", muted: "", playsinline: "", src: "https://ak3.picdn.net/shutterstock/videos/31216543/preview/stock-footage-fukuoka-japan-skyline-and-tower.mp4", "webkit-playsinline" => ""}
+    .back_inner
+      .line15
+        .logo
+          .logo_back
+            %a.logo_title Fukuoka Navi
+            .btn-vertical-border
+              = link_to "Enter", 'maps/show',class:"Enter_btn", data: {"turbolinks" => false}
+            
        

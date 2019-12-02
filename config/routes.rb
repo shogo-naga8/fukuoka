@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root 'maps#index'
 
     resources :maps, only: [:index, :create, :show, ]
-      resources :map,only: [:index]
+    resources :about,only: [:index]
 
     
 end
