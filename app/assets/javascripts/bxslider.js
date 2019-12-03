@@ -6,7 +6,7 @@ var bxParam = {
     maxSlides:3,
     minSlides:1,
     moveSlides:1,
-    slideMargin: 40,
+    slideMargin: 40, 
     touchEnabled: false 
     // nextSelector:"#next-btn",
     // prevSelector:"#prev-btn",
@@ -23,11 +23,23 @@ $(function () {
 
 
 
-
-
-// pause スライドしてから次のスライドまでの待ち時間の設定
-
 // https://stand-4u.com/web/javascript/bxslider.html
+
+//     speed:2000,         スライドの遷移時間
+//     pause:8000,         スライドの切り替えの間隔
+//     slideWidth: 450,    サムネイルの横幅
+//     maxSlides:3,        １スライドに表示するサムネイルの最大数
+//     minSlides:1,        １スライドに表示するサムネイルの数
+//     moveSlides:1,        指定された値だけスライドします。
+//     slideMargin: 40,      サムネイル間の余白
+//     touchEnabled: false   スワイプできるようにするか否か
+
+
+
+
+
+
+
 
 
 // $(function(){
