@@ -13,7 +13,7 @@ body {
   width: 100%;
   }
     .main_header_b{
-      background-image: url("02-heavy-paper.png");
+      background: linear-gradient(#CCFF99, #FFF);
       height: 90px;
       width: 100%;
       padding: 20px;
@@ -138,7 +138,7 @@ body {
               }
 
     .main_footer{
-      background-image: url("02-heavy-paper.png");
+      background: linear-gradient(#FFF,#CCFF99);
       height: 70px;
       widows: 100%;
       font-family: fantasy;
