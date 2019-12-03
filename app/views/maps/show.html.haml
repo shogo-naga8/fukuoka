@@ -4,9 +4,9 @@
       .main_title  
         %spa Fukuoka Navi
         .main_about
-          = link_to "about", '#',class:"main_about_btn"
+          = link_to "検索機能", '#',class:"main_about_btn"
         .main_random
-          = link_to "今日のおすすめ", '#',class:"main_random_btn"
+          = link_to "言語選択", '#',class:"main_random_btn"
   .main_center
     .Lineup_view
     .LineupSection_header  
@@ -162,12 +162,14 @@
             %p.shop_name_comment 
               福岡市西副都心のシンボル的存在。。8000枚ものハーフミラーで覆われた正三角形のシャープな外観は「ミラーセイル」の愛称で親しまれている。
           .bx-clone
-            = image_tag " ", size: "350x350"
-            .shop_name 中洲屋台街
+            = image_tag "屋台.png", size: "350x350"
+            .shop_name 福岡屋台
             %li.shop_name_link
               = link_to "https://tabelog.com/fukuoka/A4001/A400103/40022410/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
+              市内の屋台件数は約105軒。
+              食品衛生法により屋台での生ものの提供は禁じられているので火を通した名物を味わってください。
               
           .bx-clone
             = image_tag " ", size: "350x350"
