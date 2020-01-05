@@ -1,15 +1,19 @@
+-# .shutter
 .wrapper
   .main_header
     .main_header_b
       .main_title  
         %spa Fukuoka Navi
-        .main_about
-          = link_to "検索機能", '#',class:"main_about_btn"
-        .main_random
-          = link_to "言語選択", '#',class:"main_random_btn"
+        .main_searchbox
+          %form.form{"data-v-9e1cc254" => ""}
+          %input.inputbox{"data-v-9e1cc254" => "", placeholder:"I'm looking for...", type:"text", value:""}/
+          .button_box{"data-v-9e1cc254" => "", type:"submit",class: "buttonbox"}
+            = fa_icon 'search',class: "search"
+        -# .main_random
+        -#   = link_to "言語選択", '#',class:"main_random_btn"
   .main_center
     .Lineup_view
-    .LineupSection_header  
+    .LineupSection_header 
       .LineupSection_header_name
         %span Food
     .bx_wrapper
@@ -143,6 +147,16 @@
             %p.shop_name_comment  
               変わり種のあるおでん屋さん。
               上品な味付けと出汁が効いていて美味しい。
+          .bx-clone
+            = image_tag "いその商店.jpg", size: "350x350"
+            .shop_name いその商店
+            %li.shop_name_link
+              = link_to "https://tabelog.com/fukuoka/A4001/A400103/40024793/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment  
+              春吉にある安くて質の高い肉が食べられるお店です。
+              板盛は見た目が大きくてびっくりします!!
+              予約なしでの来店は難しいので予約するべし。
   .main_center
     .Lineup_view
     .LineupSection_header  
@@ -175,39 +189,40 @@
             = image_tag "大濠.jpg", size: "350x350"
             .shop_name 大濠公園
             %li.shop_name_link
-              = link_to "http://www.m-and-co.net/fishman/index.html", target: "_blank" do
+              = link_to "https://www.ohorikouen.jp/about/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-              = link_to "https://www.facebook.com/MCo-269402139860692/", target: "_blank" do
-                = fa_icon 'facebook', class: "fab_fa-facebook"
             %p.shop_name_comment 
-              
-
+              大濠公園は福岡市のほぼ中央に位置し、全国有数の水景公園です。
+              毎月イベントも実施されてます。
           .bx-clone
             = image_tag "福岡城.jpg", size: "350x350"
             .shop_name 福岡城跡
             %li.shop_name_link
-              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40000336/", target: "_blank" do
+              = link_to "http://bunkazai.city.fukuoka.lg.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
             %p.shop_name_comment 
-              
+              福岡城は、1601年から7年の歳月をかけて築かれた、城の規模としては九州一の巨城。
+              国の史跡に指定されている。
           .bx-clone
             = image_tag "キャナル.jpg", size: "350x350"
             .shop_name キャナルシティ博多
             %li.shop_name_link
-              = link_to "https://kijin.owst.jp/", target: "_blank" do
+              = link_to "https://canalcity.co.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
-              
-          .bx-clone
-            = image_tag "  ", size: "350x350"
-            .shop_name 
-            %li.shop_name_link
-              = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028622/", target: "_blank" do
-                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-              = link_to "https://www.instagram.com/nejikemon/", target: "_blank" do
+              = link_to "https://www.instagram.com/canal_city/?hl=ja", target: "_blank" do
                 = fa_icon 'instagram', class: "fab_fa-instagram"
             %p.shop_name_comment 
-             
+              福岡を代表する大規模な複合施設。
+              運河が流れ、中央のステージでは、様々なイベントが行われている。
+          .bx-clone
+            = image_tag "マリン.jpg", size: "350x350"
+            .shop_name マリンワールド海の中道
+            %li.shop_name_link
+              = link_to "https://marine-world.jp/", target: "_blank" do
+                = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
+            %p.shop_name_comment 
+              海ノ中道海浜公園にある水族館。
+              様々なイベントがあり、夜のすいぞくかんは、照明が変わり昼とは雰囲気が一変した幻想的な夜の水族館を体験できる。
           .bx-clone
             = image_tag "  ", size: "350x350"
             .shop_name 
@@ -274,9 +289,59 @@
                 = fa_icon 'instagram', class: "fab_fa-instagram"
             %p.shop_name_comment  
               
-       
-  .main_footer 
-    &copy; 2019 nagase
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Simple Map
+    %meta{:content => "initial-scale=1.0", :name => "viewport"}/
+    %meta{:charset => "utf-8"}/
+    :css
+      #map {
+        margin-left:auto;
+        margin-right:auto;
+        text-align:left;
+        width:100%;
+        height:30%;
+        bottom:50px;
+      }
+  %body
+    #map
+    :javascript
+      function initMap() {
+      var locations = [
+          ['きんぎょ', 33.5828785, 130.3999864],
+          ['炉ばた雷橋', 33.5884059, 130.40269420000004],
+          ['博多炉端 魚男', 33.5843887, 130.39959210000006],
+          ['とりかわ 粋恭', 33.5820075, 130.39726340000004]
+        ];
+      var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: new google.maps.LatLng(33.5815795, 130.26928469999996),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+      var infowindow = new google.maps.InfoWindow;
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {  
+          marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map
+          
+        });
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+          }
+          })(marker, i));
+        }
+      }
+  %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyD6fuX_Lzxk6oFhahKdF6O5JdEOFEYfPyE&callback=initMap"}
+
+.main_footer 
+  &copy; 2019 nagase
 
 
 
