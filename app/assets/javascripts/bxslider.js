@@ -10,7 +10,6 @@ var bxParam = {
     slideMargin: 40, 
     touchEnabled: false,
     infiniteLoop: true,
-    prevSelector:"#angle-double-left",
 };
 
 $(function () {
@@ -20,6 +19,7 @@ $(function () {
       "mouseleave": function(){slider.startAuto();}
   });
 });
+
 
 
 
