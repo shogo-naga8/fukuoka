@@ -60,3 +60,9 @@ gem 'carrierwave'
 
 gem 'font_awesome5_rails'
 
+gem "gmaps4rails"
+
+gem "geocoder"
+
+gem 'dotenv-rails'
+

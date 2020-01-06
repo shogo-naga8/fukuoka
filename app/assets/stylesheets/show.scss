@@ -1,64 +1,170 @@
 html {
   height: 100%;
 }
+$bg_color:#fafafa;
+$font_color:#333;
 body {
-  height: 100%;
+  height: 185%;
   margin: 0;
+  background-color:$bg_color;
+  color: $font_color;
+}
+.shutter{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff;
+  z-index:9999;
+  animation: byeShutter 2.6s forwards;
+  &::before,
+  &::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+  }
+  &::before{
+    background-color:#000;
+    width:0;
+    height:1px;
+    animation: shutterOpen1 2.6s forwards;
+  }
+  &::after{
+    width:120%;
+    height:0;
+    margin-left:-10%;
+    background-color:#ccc;
+    animation: shutterOpen2 2.6s forwards;
+  }
 }
 .wrapper{
- 
+  animation: contentScale 2.6s forwards;
+}
+@keyframes byeShutter{
+  70%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    display:none;
+    z-index:-1;
+  }
+}
+@keyframes shutterOpen1{
+  0%{
+    width:0;
+    height:1px;
+  }
+  50%{
+    width:100%;
+    height:1px;
+  }
+  90%{
+    width:100%;
+    height:100%;
+  }
+  100%{
+    width:100%;
+    height:100%;
+  }
+}
+@keyframes shutterOpen2{
+  60%{
+    width:120%;
+    height:0;
+    transform:rotate(5deg);
+  }
+  90%{
+    width:120%;
+    height:100%;
+    transform:rotate(-5deg);
+  }
+  100%{
+    width:120%;
+    height:100%;
+    transform:rotate(-5deg);
+  }
+}
+@keyframes contentScale{
+  70%{
+    transform:perspective(800px) scale(0.9) rotateX(15deg);
+  }
+  100%{
+    transform:perspective(800px) scale(1) rotateX(0);
+  }
+}
+.wrapper{
   .main_header{
- 
-  height: 100px;
+  height: 150px;
   width: 100%;
   }
     .main_header_b{
-      background: linear-gradient(#CCFF99, #FFF);
-      height: 90px;
+      position: relative;
+      box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.2);
+      height: 100px;
       width: 100%;
       padding: 20px;
     }
       .main_title{
+        position: relative;
         font-family: fantasy;
         font-size: 50px;
         padding: 10px;
         display: flex;
         justify-content: space-between;
       }
-        .main_about{
-        font-size: 30px;
-        padding-top: 15px;
-        
-          &_btn{
-            text-decoration: none;
-            color:  #000;
-            font-weight: bold; 
-          
-            &:hover{
-            color:#ff9900;
-          }
-        }
+      .search_box{
+        font-family:'arial unicode ms';
+        border-radius: 2px; 
+      }
+      .inputbox{
+        position: relative;
+        bottom: 10px;
+        right: 300px;
+        width: 110%;
+        height: 50%;
+        padding: 10px 40px 5px 8px;
+        outline: none;
+        font-size: 15px;
+        border: none;
+        border-bottom: 1px solid #2c2c2c;
+      }
+      .buttonbox{
+        position: absolute;
+        width: 25px;
+        height: 30%;
+        top: 30px;
+        left: 1085px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .search{
+      font-size: 20px;
+      color:  rgb(186, 186, 186);;
       }
         .main_random{
           font-family:'arial unicode ms';
           font-size: 25px;
           padding-right: 300px;
           padding-top: 20px;
-        
           &_btn{
             text-decoration: none;
             color:  #000;
             font-weight: bold; 
-          
             &:hover{
               color:#ff9900;  
           }
         }
       }  
-
   .main_center{
     background-color:#fff;
-    height: 635px;
+    height: 700px;
     width: 95%;
     margin: 0 auto;
     top: 400px;
@@ -67,12 +173,11 @@ body {
     .LineupSection_header {
       display: flex;
       align-items: center;
-      border-bottom: 2px solid #ff9900;
-    
+      border-bottom: 2px solid;
       &_name{
         min-width: 158px; 
         display: block;
-        background: #ff9900;
+        background: #000;
         padding-left: .24em;
         padding-top: 2px;
         color: #fff;
@@ -89,6 +194,12 @@ body {
           font-size: 20px;
           font-family: 'Comic Sans MS';
         }
+        .prev-btn{
+          color:#000;
+          position: absolute;
+          top: 320px;
+          font-size: 2em 
+        }
             .shop_name {
               font-family:'arial unicode ms';
               width: 350px;
@@ -96,7 +207,6 @@ body {
               padding-bottom: 5px;
               display: flex;
               position: relative;
-
               &_link{
                 position: absolute;
                 right: 110px;
@@ -128,7 +238,6 @@ body {
                     .fab_fa-instagram:hover {
                       color:#ff9900;
                     }
-
               .shop_name_comment {
                 font-family:'arial unicode ms';
                 width: 350px;
@@ -136,9 +245,9 @@ body {
                 border-top-width: 2px;
                 padding-top: 5px;
               }
-
+            }
     .main_footer{
-      background: linear-gradient(#FFF,#CCFF99);
+      box-shadow: 0 -8px 12px -8px rgba(0, 0, 0, 0.2);
       height: 70px;
       widows: 100%;
       font-family: fantasy;
@@ -147,4 +256,3 @@ body {
       padding: 20px;
       bottom: 100px;
     }
-}
