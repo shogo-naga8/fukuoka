@@ -9,8 +9,37 @@
           %input.inputbox{"data-v-9e1cc254" => "", placeholder:"I'm looking for...", type:"text", value:""}/
           .button_box{"data-v-9e1cc254" => "", type:"submit",class: "buttonbox"}
             = fa_icon 'search',class: "search"
-        -# .main_random
-        -#   = link_to "言語選択", '#',class:"main_random_btn"
+          .global-header__lang-title
+            = fa_icon 'fa-angle-down',class: ""
+            .global-header__nav-child.is-b{:style => "opacity: 1; display: none;"}
+              .global-header__nav-child-item
+                = link_to "https://www.guidoor.jp/en/city/mishima/"
+                
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/es/city/mishima/"}
+              -#   ES
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/fr/city/mishima/"}
+              -#   FR
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/id/city/mishima/"}
+              -#   ID
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/ko/city/mishima/"}
+              -#   KO
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/th/city/mishima/"}
+              -#   TH
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/zh-CN/city/mishima/"}
+              -#   ZH(簡体字)
+              -#   %i.icon.icon-arrow2
+              -# %a{:href => "https://www.guidoor.jp/zh-TW/city/mishima/"}
+              -#   ZH(繁体字)
+              -#   %i.icon.icon-arrow2
+
+          
+
   .main_center
     .Lineup_view
     .LineupSection_header 
@@ -273,10 +302,10 @@
 
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content:"text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Simple Map
-    %meta{:content => "initial-scale=1.0", :name => "viewport"}/
-    %meta{:charset => "utf-8"}/
+    %meta{content:"initial-scale=1.0", name:"viewport"}/
+    %meta{charset:"utf-8"}/
     :css
       #map {
         margin-left:auto;
@@ -301,7 +330,16 @@
           ['三馬力＋１／２', 33.5635072, 130.35437230000002],
           ['塚本鮮魚店', 33.5464855, 130.16932470000006],
           ['肉の雷橋', 33.5884059, 130.40269420000004],
-          ['味の正福', 33.5915905, 130.4023522]
+          ['味の正福', 33.5915905, 130.4023522],
+          ['肉肉うどん', 33.5831419, 130.40326749999997],
+          ['満月堂', 33.583347, 130.396663],
+          ['いその商店', 33.588253, 130.4050436],
+
+          ['福岡タワー', 33.5934261, 130.35200099999997],
+          ['大濠公園', 33.586088, 130.376371],
+          ['福岡城跡', 33.5862338, 130.38475240000002],
+          ['キャナルシティ博多', 33.5896281, 130.41119530000003],
+          ['マリンワールド海の中道', 33.660851, 130.36341300000004]
 
 
 
@@ -309,7 +347,7 @@
 
         ];
       var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 11,
           center: new google.maps.LatLng(33.5815795, 130.26928469999996),
           mapTypeId: google.maps.MapTypeId.ROADMAP
         });
@@ -328,6 +366,6 @@
           })(marker, i));
         }
       }
-  %script{:src => "https://maps.googleapis.com/maps/api/js?key={        }&callback=initMap"}
+  %script{src:"https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_KEY"]}&callback=initMap"}
 .main_footer 
   &copy; 2019 nagase
