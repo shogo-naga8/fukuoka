@@ -1,14 +1,15 @@
 # README
 
 
-* Apprlication
-  fukuoka navi
----
-* Description
-  私が紹介したい福岡のお店や観光地の紹介です。
----
-* Configuration
----
-* Function
----
-* Demo
+* Apprlication  
+fukuoka navi
+-
+* Description  
+私が紹介したい福岡のお店や観光地の紹介です。
+-
+* Function  
+検索機能
+google map API
+-
+* Demo  
+
