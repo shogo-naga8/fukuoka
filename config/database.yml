@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: fukuoka_production
-  username: fukuoka
-  password: <%= ENV['FUKUOKA_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
