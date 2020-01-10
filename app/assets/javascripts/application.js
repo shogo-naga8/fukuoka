@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
+//= require jquery.bxslider.min
 //= require_tree .
