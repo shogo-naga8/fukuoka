@@ -107,24 +107,22 @@ body {
       box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.2);
       height: 100px;
       width: 100%;
-      padding: 2  0px;
     }
       .main__title{
         position: relative;
         font-family: fantasy;
+        top: 30px;
+        left: 30px;
+        width: 80%;
         font-size: 50px;
-        padding: 10px;
         display: flex;
         justify-content: space-between;
       }
-        .search__box{
-          font-family:'arial unicode ms';
-          border-radius: 2px; 
-        }
+        
       .inputbox{
         position: relative;
-        top:15px;
-        left: 150px;
+        bottom: 5px;
+        
         width: 110%;
         height: 50%;
         padding: 10px 40px 5px 8px;
@@ -132,13 +130,15 @@ body {
         font-size: 15px;
         border: none;
         border-bottom: 1px solid #2c2c2c;
+        font-family: fantasy;
+        border-radius: 2px; 
       }
           .buttonbox{
             position: absolute;
             width: 25px;
             height: 30%;
-            top: 30px;
-            left: 1085px;
+            top: 28px;
+            left: 1140px;
             z-index: 2;
             display: flex;
             align-items: center;
@@ -149,7 +149,24 @@ body {
             color:  rgb(186, 186, 186);;
           } 
       
-
+          .main__lang__title{
+            font-size: 15px;
+            font-family: fantasy;
+            left: 1250px;
+            position: absolute;
+            border-bottom: 1px solid #2c2c2c;
+            height: 33px;
+            width: 70px;
+            text-align: center;
+            top: 25px;
+          }
+          .list{
+            position: absolute;
+            font-size: 20px;
+            top: 10px;
+            left: 60px;
+            color:  rgb(186, 186, 186);;
+          }
 
   .main__center{
     background-color:#fff;

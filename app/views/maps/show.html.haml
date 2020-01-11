@@ -4,16 +4,20 @@
     .main__header__two
       .main__title  
         Fukuoka Navi
-
         .main__searchbox
           %input.inputbox{placeholder:"I'm looking for...", type:"text", value:""}/
           .button__box{type:"submit",class: "buttonbox"}
             = fa_icon 'search',class: "search"
-        .mainlang-title
-          = fa_icon 'angle-down',class: "search"
-          .global-header__nav-child.is-b{:style => "opacity: 1; display: none;"}
-            .global-header__nav-child-item
-              = link_to "https://www.guidoor.jp/en/city/mishima/"
+        .main__lang__title 
+          jp
+          = fa_icon 'angle-down',class: "list"
+          .main__lang__nav-child{:style => "opacity: 1; display: none;"}
+            .main__lang__nav-child-item
+              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "EN"
+              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "JP"
+              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "ko"
+              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "zh-CN"
+              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "zh-TW"
                 
               -#   %i.icon.icon-arrow2
               -# %a{:href => "https://www.guidoor.jp/es/city/mishima/"}
@@ -185,9 +189,9 @@
               板盛は見た目が大きくてびっくりします!!
               予約なしでの来店は難しいので予約するべし。
   .main__center
-    .Lineup__view
-    .LineupSection__header  
-      .LineupSection__header__name
+    .main__Lineup__view
+    .main__LineupSection__header  
+      .main__LineupSection__header__name
         %span tourist spot
     .bx__wrapper
       .bx__viewport
