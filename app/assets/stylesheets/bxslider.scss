@@ -1,4 +1,4 @@
-.bx_wrapper {
+.bx__wrapper {
   position: relative;
   padding: 0;
   *zoom: 1;
@@ -9,16 +9,16 @@
   max-width: 110%;
   display: block;
 }
-.bx-wrapper .bx-pager,
-.bx-wrapper .bx-controls-auto {
+.bx__wrapper .bx-pager,
+.bx__wrapper .bx-controls-auto {
   position: absolute;
   bottom: -50px;
   width: 100%;
 }
-.bx-wrapper .bx-pager {
+.bx__wrapper .bx-pager {
   text-align: center;
 }
-.bx-wrapper .bx-pager.bx-default-pager a {
+.bx__wrapper .bx-pager.bx-default-pager a {
   background:#ddd;
   text-indent: -9999px;
   display: block;
@@ -30,19 +30,19 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-.bx-wrapper .bx-pager.bx-default-pager a:hover,
-.bx-wrapper .bx-pager.bx-default-pager a.active,
-.bx-wrapper .bx-pager.bx-default-pager a:focus {
+.bx__wrapper .bx-pager.bx-default-pager a:hover,
+.bx__wrapper .bx-pager.bx-default-pager a.active,
+.bx__wrapper .bx-pager.bx-default-pager a:focus {
   background: #000;
 }
-.bx-wrapper .bx-pager-item,
-.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+.bx__wrapper .bx-pager-item,
+.bx__wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
   vertical-align: bottom;
   *zoom: 1;
   *display: inline;
 }
-.bx-wrapper .bx-controls-direction a {
+.bx__wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;
   margin-top: -16px;

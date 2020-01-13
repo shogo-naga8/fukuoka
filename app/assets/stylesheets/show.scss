@@ -98,33 +98,67 @@ body {
   }
 }
 .wrapper{
-  .main_header{
+  .main__header{
   height: 150px;
   width: 100%;
   }
-    .main_header_b{
+    .main__header__two{
       position: relative;
       box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.2);
       height: 100px;
       width: 100%;
-      padding: 20px;
     }
-      .main_title{
+      .main__title{
         position: relative;
         font-family: fantasy;
+        top: 30px;
+        left: 30px;
+        width: 80%;
         font-size: 50px;
-        padding: 10px;
         display: flex;
         justify-content: space-between;
       }
-      .search_box{
-        font-family:'arial unicode ms';
-        border-radius: 2px; 
+      h1 {
+        display: flex;
+        font-size: 50px;
+        color: #333;
+        animation: neonBlur 16s infinite;
+        font-weight: 300;
+      }
+      h1 > span:nth-child(1) {
+        opacity: .5;
+        font-weight: 800;
+      }
+      h1 > span:nth-child(2) {
+        animation: neonBlink 5s infinite;
+      }
+      h1 > span:nth-child(3) {
+        opacity: .4;
+      }
+      h1 > span:nth-child(4) {
+        animation: neonBlink 2s infinite;
+      }
+      @keyframes neonBlink {
+        0% { opacity: 1; }
+        10% { opacity: .6; }
+        12% { opacity: 1; }
+        15% { opacity: .4; }
+        17% { opacity: 1; }
+        18% { opacity: .3; }
+        19% { opacity: 1; }
+        89% { opacity: 1; }
+        91% { opacity: .7; }
+        94% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+      @keyframes neonBlur {
+        0% { text-shadow: 0px 0px 5px #333; }
+        50% { text-shadow: 0px 0px 5px #333; }
+        100% { text-shadow: 0px 0px 5px #333; }
       }
       .inputbox{
         position: relative;
-        bottom: 10px;
-        right: 300px;
+        bottom: 5px;
         width: 110%;
         height: 50%;
         padding: 10px 40px 5px 8px;
@@ -132,37 +166,74 @@ body {
         font-size: 15px;
         border: none;
         border-bottom: 1px solid #2c2c2c;
+        font-family: fantasy;
+        border-radius: 2px; 
       }
-      .buttonbox{
-        position: absolute;
-        width: 25px;
-        height: 30%;
-        top: 30px;
-        left: 1085px;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-      }
-      .search{
-      font-size: 20px;
-      color:  rgb(186, 186, 186);;
-      }
-        .main_random{
-          font-family:'arial unicode ms';
-          font-size: 25px;
-          padding-right: 300px;
-          padding-top: 20px;
-          &_btn{
-            text-decoration: none;
-            color:  #000;
-            font-weight: bold; 
-            &:hover{
-              color:#ff9900;  
+          .buttonbox{
+            position: absolute;
+            width: 25px;
+            height: 30%;
+            top: 28px;
+            left: 1140px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
           }
-        }
-      }  
-  .main_center{
+          .search{
+            font-size: 20px;
+            color:  rgb(186, 186, 186);;
+          } 
+          .main__lang__title{
+            font-size: 15px;
+            font-family: fantasy;
+            left: 1250px;
+            position: absolute;
+            border-bottom: 1px solid #2c2c2c;
+            height: 33px;
+            width: 70px;
+            text-align: center;
+            top: 25px;
+          }
+          .list{
+            position: absolute;
+            font-size: 20px;
+            top: 10px;
+            left: 60px;
+            color:  rgb(186, 186, 186);
+          }
+          .main__lang__list{
+            position: absolute;
+            width: 160px;
+            top: 50px;
+            right: -40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: block;
+            padding: 12px 17px 10px;
+            z-index: 2;
+            text-align: left;
+            display: none;
+          }
+          .languagelist{
+            display: block;
+            color: #FFF;
+            padding: 9px 0 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            font-size: 15px;
+            position: relative;
+            text-decoration: none;
+            display: none;
+          }
+          .rightlist{
+            font-size: 20px;
+            color:  rgb(186, 186, 186);
+            right: 20px;
+            padding:  11px;
+            position: absolute;
+            display: none;
+          }
+
+  .main__center{
     background-color:#fff;
     height: 700px;
     width: 95%;
@@ -170,11 +241,11 @@ body {
     top: 400px;
     overflow: scroll;
   }
-    .LineupSection_header {
+    .main__LineupSection__header {
       display: flex;
       align-items: center;
       border-bottom: 2px solid;
-      &_name{
+      &__name{
         min-width: 158px; 
         display: block;
         background: #000;
@@ -186,73 +257,67 @@ body {
         text-align: center;
         font-size: 20px;
         letter-spacing: .24em;
+      } 
       }
-    }
-        span{
-          padding-top: 0;
-          line-height: 30px;
-          font-size: 20px;
-          font-family: 'Comic Sans MS';
-        }
-        .prev-btn{
-          color:#000;
-          position: absolute;
-          top: 320px;
-          font-size: 2em 
-        }
-            .shop_name {
+      spa{
+        padding-top: 0;
+        line-height: 30px;
+        font-size: 20px;
+        font-family: 'Comic Sans MS';
+      }
+            .shop__name {
               font-family:'arial unicode ms';
               width: 350px;
               font-size: 25px;
               padding-bottom: 5px;
               display: flex;
               position: relative;
-              &_link{
+              &__link{
                 position: absolute;
                 right: 110px;
                 top: 360px;
               }
-            }
-                .fa-external-link-alt {
+              }
+                .fa-external-link-alt{
                   color:#000;
                   font-size: 1.2em 
                 }
-                  .fa-external-link-alt:hover {
+                .fa-external-link-alt:hover{
                     color:#ff9900;
-                  }
+                }
                 .fab_fa-facebook{
                   color:#000;
                   font-size: 1.4em;
                   right: 1px;
                   font-family: "Font Awesome 5 Brands";
                 }
-                  .fab_fa-facebook:hover {
-                    color:#ff9900;
-                  }
-                  .fab_fa-instagram{
-                    color:#000;
-                    font-size: 1.4em;
-                    right: 1px;
-                    font-family: "Font Awesome 5 Brands";
-                  }
-                    .fab_fa-instagram:hover {
-                      color:#ff9900;
-                    }
-              .shop_name_comment {
-                font-family:'arial unicode ms';
-                width: 350px;
-                border: 0 solid #000;
-                border-top-width: 2px;
-                padding-top: 5px;
-              }
+                .fab_fa-facebook:hover{
+                  color:#ff9900;
+                }
+                .fab_fa-instagram{
+                  color:#000;
+                  font-size: 1.4em;
+                  right: 1px;
+                  font-family: "Font Awesome 5 Brands";
+                }
+                .fab_fa-instagram:hover{
+                  color:#ff9900;
+                }
+            .shop__name__comment {
+              font-family:'arial unicode ms';
+              width: 350px;
+              border: 0 solid #000;
+              border-top-width: 2px;
+              padding-top: 5px;
             }
-    .main_footer{
-      box-shadow: 0 -8px 12px -8px rgba(0, 0, 0, 0.2);
-      height: 70px;
-      widows: 100%;
-      font-family: fantasy;
-      font-size: 20px;
-      text-align: center;
-      padding: 20px;
-      bottom: 100px;
-    }
+}
+.main__footer{
+  box-shadow: 0 -8px 12px -8px rgba(0, 0, 0, 0.2);
+  height: 70px;
+  widows: 100%;
+  font-family: fantasy;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  bottom: 100px;
+}

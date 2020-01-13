@@ -1,307 +1,301 @@
--# .shutter
+.shutter
 .wrapper
-  .main_header
-    .main_header_b
-      .main_title  
-        %spa Fukuoka Navi
-
-        .main_searchbox
-          %form.form{"data-v-9e1cc254" => ""}
-          %input.inputbox{"data-v-9e1cc254" => "", placeholder:"I'm looking for...", type:"text", value:""}/
-          .button_box{"data-v-9e1cc254" => "", type:"submit",class: "buttonbox"}
+  .main__header
+    .main__header__two
+      .main__title  
+        %h1
+          %span.break-down Fuk
+          %span u
+          o
+          %span k
+          a
+          %span Na
+          vi
+        .main__searchbox
+          %input.inputbox{placeholder:"I'm looking for...", type:"text", value:""}/
+          .button__box{type:"submit",class: "buttonbox"}
             = fa_icon 'search',class: "search"
-          .global-header__lang-title
-            = fa_icon 'fa-angle-down',class: ""
-            .global-header__nav-child.is-b{:style => "opacity: 1; display: none;"}
-              .global-header__nav-child-item
-                = link_to "https://www.guidoor.jp/en/city/mishima/"
-                
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/es/city/mishima/"}
-              -#   ES
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/fr/city/mishima/"}
-              -#   FR
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/id/city/mishima/"}
-              -#   ID
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/ko/city/mishima/"}
-              -#   KO
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/th/city/mishima/"}
-              -#   TH
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/zh-CN/city/mishima/"}
-              -#   ZH(簡体字)
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/zh-TW/city/mishima/"}
-              -#   ZH(繁体字)
-              -#   %i.icon.icon-arrow2
+        .main__lang__title 
+          jp
+          = fa_icon 'angle-down',class: "list"
+          .main__lang__list
+            = fa_icon 'angle-right',class: "rightlist" 
+            = link_to "EN","#",class: "languagelist"
 
-  .main_center
-    .Lineup_view
-    .LineupSection_header  
-      .LineupSection_header_name
-        %span Food
-    .bx_wrapper
-      .bx-viewport
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "JP","#",class: "languagelist"
+
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "KO","#",class: "languagelist"
+
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "ZH(繁体字)","#",class: "languagelist"
+            
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "ZH(簡体字)","#",class: "languagelist"
+
+  .main__center
+    .main__Lineup__view
+    .main__LineupSection__header  
+      .main__LineupSection__header__name
+        %spa Food
+    .bx__wrapper
+      .bx__viewport
         .bxslider
-          .bx-clone
+          .bx__clone
             = image_tag "金魚.jpg", size: "350x350"
-            .shop_name きんぎょ 
-            %li.shop_name_link
+            .shop__name きんぎょ 
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400104/40003252/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               もつ鍋と刺身が美味しく落ち着いた雰囲気のお店。
               お通しは金魚を模したプチトマトが可愛く見た目がキレイ。
-          .bx-clone
+          .bx__clone
             = image_tag "雷橋.jpg", size: "350x350"
-            .shop_name 炉ばた雷橋
-            %li.shop_name_link
+            .shop__name 炉ばた雷橋
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400103/40022410/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               カウンター12席しかないため予約必須。
               全て目の前で焼いてくれるので見張ることなく気楽に食べれる。
               系列店の肉の雷橋も美味しいです。
-          .bx-clone
+          .bx__clone
             = image_tag "魚男.jpg", size: "350x350"
-            .shop_name 博多炉端 魚男 
-            %li.shop_name_link
+            .shop__name 博多炉端 魚男 
+            %li.shop__name__link
               = link_to "http://www.m-and-co.net/fishman/index.html", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://www.facebook.com/MCo-269402139860692/", target: "_blank" do
                 = fa_icon 'facebook', class: "fab_fa-facebook"
-            %p.shop_name_comment 
+            .shop__name__comment 
               鮮魚が自慢の店で夜は居酒屋、昼は魚を使った定食が人気。
               インスタ映えする料理もある。
-          .bx-clone
+          .bx__clone
             = image_tag "とりかわ.jpg", size: "350x350"
-            .shop_name とりかわ 粋恭
-            %li.shop_name_link
+            .shop__name とりかわ 粋恭
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400104/40000336/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               かりかりしっとりしたとりかわが有名の焼き鳥屋。
               豚バラも絶品。
-          .bx-clone
+          .bx__clone
             = image_tag "喜人.jpg", size: "350x350"
-            .shop_name 居座火家 喜人
-            %li.shop_name_link
+            .shop__name 居座火家 喜人
+            %li.shop__name__link
               = link_to "https://kijin.owst.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               京風の創作料理で人気のお店。大将の趣味でBGMは椎名林檎の曲しか流れていない。
               ご本人も来店されたとか。
-          .bx-clone
+          .bx__clone
             = image_tag "ねじけもん.png", size: "350x350"
-            .shop_name 野菜巻き串屋 ねじけもん 
-            %li.shop_name_link
+            .shop__name 野菜巻き串屋 ねじけもん 
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028622/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://www.instagram.com/nejikemon/", target: "_blank" do
                 = fa_icon 'instagram', class: "fab_fa-instagram"
-            %p.shop_name_comment 
+            .shop__name__comment 
               創作串焼きが楽しめるお店。串の種類も豊富で色々な味を楽しめる。
-          .bx-clone
+          .bx__clone
             = image_tag "とり福.jpg", size: "350x350"
-            .shop_name とり福
-            %li.shop_name_link
+            .shop__name とり福
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400105/40007600/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment
+            .shop__name__comment
               六本松の老舗の焼鳥屋さん。レトロ感漂う店内で味は絶品。
               個人的にはここの焼き豚足がおすすめです。
-          .bx-clone
+          .bx__clone
             = image_tag "三馬力.jpg", size: "350x350"
-            .shop_name 三馬力＋１／２
-            %li.shop_name_link
+            .shop__name 三馬力＋１／２
+            %li.shop__name__link
               = link_to "http://sanbariki.weebly.com/index.html", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://ja-jp.facebook.com/sanbariki%20/", target: "_blank" do
                 = fa_icon 'facebook', class: "fab_fa-facebook"
-            %p.shop_name_comment 
+            .shop__name__comment 
               飯倉2丁目にある焼肉屋。店内の煙モクモクになります。
               三馬力ステーキは是非食べて下さい。
-          .bx-clone
+          .bx__clone
             = image_tag "塚本.jpg", size: "350x350"
-            .shop_name 塚本鮮魚店
-            %li.shop_name_link
+            .shop__name 塚本鮮魚店
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4009/A400901/40006148/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               糸島市加布里にあるお店。
-              おすすめは特上海鮮丼で限定20食なので開店待ちするべし。     
-          .bx-clone
+              おすすめは特上海鮮丼で限定20食なので開店待ちするべし。
+          .bx__clone
             = image_tag "肉.jpg", size: "350x350"
-            .shop_name 肉の雷橋
-            %li.shop_name_link
+            .shop__name 肉の雷橋
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400103/40038900/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               店内はコの字カウンターのみです。
               牛・豚・鶏などの色々な部位を味わえますが迷った時は『肉盛』を頼みましょう。
               系列店の炉ばた雷橋も美味しいです。
-          .bx-clone
+          .bx__clone
             = image_tag "味の正福.jpg", size: "350x350"
-            .shop_name 味の正福
-            %li.shop_name_link
+            .shop__name 味の正福
+            %li.shop__name__link
               = link_to "http://www.masafuku.com/index.html", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               福岡で美味しいお魚定食を食べるとしたらここです。
               ごはんのおかわりが無料！！。ランチ時には行列ができる。
-          .bx-clone
+          .bx__clone
             = image_tag "肉肉うどん.png", size: "350x350"
-            .shop_name 肉肉うどん
-            %li.shop_name_link
+            .shop__name 肉肉うどん
+            %li.shop__name__link
               = link_to "http://nikunikuudon.co.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://www.facebook.com/%E8%82%89%E8%82%89%E3%81%86%E3%81%A9%E3%82%93-149147228558757/?ref=nf&hc_ref=ARSAkoUzJsa-vPx3o8iFCPWZenRrgrrnzMFRa4Pcf5M6B2h04dW3hggqWFarKUHsqWE", target: "_blank" do
                 = fa_icon 'facebook', class: "fab_fa-facebook"
-            %p.shop_name_comment  
+            .shop__name__comment  
               北九州発祥で40年以上親しまれている肉うどん。
-              濃いつゆとたっぷりの生姜のパンチがGOOD！！。
-          .bx-clone
+              濃いつゆとたっぷりの生姜のパンチがGOOD！！
+          .bx__clone
             = image_tag "満月堂.jpg", size: "350x350"
-            .shop_name 満月堂
-            %li.shop_name_link
+            .shop__name 満月堂
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400104/40028792/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://www.instagram.com/mangetsudoh_imaizumi/", target: "_blank" do
                 = fa_icon 'instagram', class: "fab_fa-instagram"
-            %p.shop_name_comment  
+            .shop__name__comment  
               変わり種のあるおでん屋さん。
               上品な味付けと出汁が効いていて美味しい。
-          .bx-clone
+          .bx__clone
             = image_tag "いその商店.jpg", size: "350x350"
-            .shop_name いその商店
-            %li.shop_name_link
+            .shop__name いその商店
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400103/40024793/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment  
+            .shop__name__comment  
               春吉にある安くて質の高い肉が食べられるお店です。
               板盛は見た目が大きくてびっくりします!!
               予約なしでの来店は難しいので予約するべし。
-  .main_center
-    .Lineup_view
-    .LineupSection_header  
-      .LineupSection_header_name
-        %span tourist spot
-    .bx_wrapper
-      .bx-viewport
+  .main__center
+    .main__Lineup__view
+    .main__LineupSection__header  
+      .main__LineupSection__header__name
+        %spa tourist spot
+    .bx__wrapper
+      .bx__viewport
         .bxslider
-          .bx-clone
+          .bx__clone
             = image_tag "タワー.png", size: "350x350"
-            .shop_name 福岡タワー
-            %li.shop_name_link
+            .shop__name 福岡タワー
+            %li.shop__name__link
               = link_to "https://www.fukuokatower.co.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://www.instagram.com/fukuokatower_official/", target: "_blank" do
                 = fa_icon 'instagram', class: "fab_fa-instagram"
-            %p.shop_name_comment 
+            .shop__name__comment 
               福岡市西副都心のシンボル的存在。。8000枚ものハーフミラーで覆われた正三角形のシャープな外観は「ミラーセイル」の愛称で親しまれている。
-          .bx-clone
+          .bx__clone
             = image_tag "屋台.png", size: "350x350"
-            .shop_name 福岡屋台
-            %li.shop_name_link
+            .shop__name 福岡屋台
+            %li.shop__name__link
               = link_to "https://tabelog.com/fukuoka/A4001/A400103/40022410/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               市内の屋台件数は約105軒。
               食品衛生法により屋台での生ものの提供は禁じられているので火を通した名物を味わってください。
-          .bx-clone
+          .bx__clone
             = image_tag "大濠.jpg", size: "350x350"
-            .shop_name 大濠公園
-            %li.shop_name_link
+            .shop__name 大濠公園
+            %li.shop__name__link
               = link_to "https://www.ohorikouen.jp/about/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               大濠公園は福岡市のほぼ中央に位置し、全国有数の水景公園です。
               毎月イベントも実施されてます。
-          .bx-clone
+          .bx__clone
             = image_tag "福岡城.jpg", size: "350x350"
-            .shop_name 福岡城跡
-            %li.shop_name_link
+            .shop__name 福岡城跡
+            %li.shop__name__link
               = link_to "http://bunkazai.city.fukuoka.lg.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               福岡城は、1601年から7年の歳月をかけて築かれた、城の規模としては九州一の巨城。
               国の史跡に指定されている。
-          .bx-clone
+          .bx__clone
             = image_tag "キャナル.jpg", size: "350x350"
-            .shop_name キャナルシティ博多
-            %li.shop_name_link
+            .shop__name キャナルシティ博多
+            %li.shop__name__link
               = link_to "https://canalcity.co.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "https://www.instagram.com/canal_city/?hl=ja", target: "_blank" do
                 = fa_icon 'instagram', class: "fab_fa-instagram"
-            %p.shop_name_comment 
+            .shop__name__comment 
               福岡を代表する大規模な複合施設。
               運河が流れ、中央のステージでは、様々なイベントが行われている。
-          .bx-clone
+          .bx__clone
             = image_tag "マリン.jpg", size: "350x350"
-            .shop_name マリンワールド海の中道
-            %li.shop_name_link
+            .shop__name マリンワールド海の中道
+            %li.shop__name__link
               = link_to "https://marine-world.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               海ノ中道海浜公園にある水族館。
               様々なイベントがあり、夜のすいぞくかんは、照明が変わり昼とは雰囲気が一変した幻想的な夜の水族館を体験できる。
-          .bx-clone
+          .bx__clone
             = image_tag "櫛田.jpg", size: "350x350"
-            .shop_name 櫛田神社
-            %li.shop_name_link
+            .shop__name 櫛田神社
+            %li.shop__name__link
               = link_to "https://www.jalan.net/kankou/spt_40132ag2130011468/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment
+            .shop__name__comment
               博多の総鎮守として『お櫛田さん』の愛称で広く市民から親しまれている神社。
               当社に奉納される博多祇園山笠は、博多の夏の風物詩として全国的にも有名。
-          .bx-clone
+          .bx__clone
             = image_tag "動物園.jpg", size: "350x350"
-            .shop_name 福岡市動植物園
-            %li.shop_name_link
+            .shop__name 福岡市動植物園
+            %li.shop__name__link
               = link_to "http://zoo.city.fukuoka.lg.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               200種を越える動物を飼育、2600種を越える植物を生育している。
               どちらの入り口から入ってもお互いを自由に行き来して楽しむことができる。
               夏には「夜の動植物園」もあります。
-          .bx-clone
-            = image_tag "天神.jpeg", size: "350x350"
-            .shop_name 天神エリア
-            %li.shop_name_link
+          .bx__clone
+            = image_tag "天神.jpg", size: "350x350"
+            .shop__name 天神エリア
+            %li.shop__name__link
               = link_to "https://tenjinsite.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               九州一の繁華街。
               広大な地下街や商業施設、美術館、コンサートホールなどが密集してます。
-          .bx-clone
+          .bx__clone
             = image_tag "羽.jpg", size: "350x350"
-            .shop_name パームビーチ(糸島市)
-            %li.shop_name_link
+            .shop__name パームビーチ(糸島市)
+            %li.shop__name__link
               = link_to "https://www.city.itoshima.lg.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
               = link_to "http://pb-gardens.com/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               福岡県糸島半島にある「天使の羽」の壁画がSNS映え抜群!
               そのほかにもおしゃれなカフェなどもあります。
-          .bx-clone
+          .bx__clone
             = image_tag "紅葉.jpg", size: "350x350"
-            .shop_name 雷山千如寺大悲王院
-            %li.shop_name_link
+            .shop__name 雷山千如寺大悲王院
+            %li.shop__name__link
               = link_to "https://sennyoji.or.jp/", target: "_blank" do
                 = fa_icon 'external-link-alt', class: "far_fa-external-link-alt"
-            %p.shop_name_comment 
+            .shop__name__comment 
               紅葉の名所として名高く、楓の大木が真っ赤に色づく秋には多くの参拝客で賑わう寺院。
               紅葉の時期にはものすごい渋滞になります。
 %html
   %head
     %meta{content:"text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Simple Map
     %meta{content:"initial-scale=1.0", name:"viewport"}/
     %meta{charset:"utf-8"}/
     :css
@@ -337,7 +331,13 @@
           ['大濠公園', 33.586088, 130.376371],
           ['福岡城跡', 33.5862338, 130.38475240000002],
           ['キャナルシティ博多', 33.5896281, 130.41119530000003],
-          ['マリンワールド海の中道', 33.660851, 130.36341300000004]
+          ['マリンワールド海の中道', 33.660851, 130.36341300000004],
+          ['櫛田神社', 33.5929546, 130.4104589],
+          ['福岡市動植物園', 33.5722796, 130.3904568],
+          ['天神エリア', 33.5904558, 130.3988442],
+          ['パームビーチ(糸島市)', 33.643393, 130.2017377],
+          ['雷山千如寺大悲王院', 33.4946542, 130.2286262],
+
 
 
         ];
@@ -362,5 +362,5 @@
         }
       }
   %script{src:"https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_KEY"]}&callback=initMap"}
-.main_footer 
-  &copy; 2019 nagase
+  .main__footer 
+    &copy; 2019 nagase
