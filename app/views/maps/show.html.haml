@@ -1,14 +1,14 @@
-.shutter
+-# .shutter
 .wrapper
   .main__header
     .main__header__two
       .main__title  
         %h1
-          %span.break-down Fuk
-          %span u
-          o
-          %span k
-          a
+          %span.break-down 
+          %span F
+          uku
+          %span o
+          ka
           %span Na
           vi
         .main__searchbox
@@ -307,7 +307,7 @@
         height:30%;
         bottom:50px;
       }
-  %body
+    :css
     #map
     :javascript
       function initMap() {
@@ -336,10 +336,7 @@
           ['福岡市動植物園', 33.5722796, 130.3904568],
           ['天神エリア', 33.5904558, 130.3988442],
           ['パームビーチ(糸島市)', 33.643393, 130.2017377],
-          ['雷山千如寺大悲王院', 33.4946542, 130.2286262],
-
-
-
+          ['雷山千如寺大悲王院', 33.4946542, 130.2286262]
         ];
       var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
@@ -361,6 +358,6 @@
           })(marker, i));
         }
       }
-  %script{src:"https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_KEY"]}&callback=initMap"}
+  %script{src:"https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_API_KEY'] }&libraries=places&callback=initMap"}
   .main__footer 
     &copy; 2019 nagase
