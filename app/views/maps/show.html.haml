@@ -310,7 +310,7 @@
     :css
     #map
     :javascript
-      function initMap() {
+      window.onload = function initMap() {
       var locations = [
           ['きんぎょ', 33.5828785, 130.3999864],
           ['炉ばた雷橋', 33.5884059, 130.40269420000004],
@@ -358,6 +358,6 @@
           })(marker, i));
         }
       }
-  %script{src:"https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_API_KEY'] }&libraries=places&callback=initMap"}
+  %script{src:"https://maps.googleapis.com/maps/api/js?sensor=true&key=#{ ENV['GOOGLE_API_KEY'] }&libraries=places&callback=initMap"}
   .main__footer 
     &copy; 2019 nagase
