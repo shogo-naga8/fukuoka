@@ -118,11 +118,47 @@ body {
         display: flex;
         justify-content: space-between;
       }
-        
+      h1 {
+        display: flex;
+        font-size: 50px;
+        color: #333;
+        animation: neonBlur 16s infinite;
+        font-weight: 300;
+      }
+      h1 > span:nth-child(1) {
+        opacity: .5;
+        font-weight: 800;
+      }
+      h1 > span:nth-child(2) {
+        animation: neonBlink 5s infinite;
+      }
+      h1 > span:nth-child(3) {
+        opacity: .4;
+      }
+      h1 > span:nth-child(4) {
+        animation: neonBlink 2s infinite;
+      }
+      @keyframes neonBlink {
+        0% { opacity: 1; }
+        10% { opacity: .6; }
+        12% { opacity: 1; }
+        15% { opacity: .4; }
+        17% { opacity: 1; }
+        18% { opacity: .3; }
+        19% { opacity: 1; }
+        89% { opacity: 1; }
+        91% { opacity: .7; }
+        94% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+      @keyframes neonBlur {
+        0% { text-shadow: 0px 0px 5px #333; }
+        50% { text-shadow: 0px 0px 5px #333; }
+        100% { text-shadow: 0px 0px 5px #333; }
+      }
       .inputbox{
         position: relative;
         bottom: 5px;
-        
         width: 110%;
         height: 50%;
         padding: 10px 40px 5px 8px;
@@ -148,7 +184,6 @@ body {
             font-size: 20px;
             color:  rgb(186, 186, 186);;
           } 
-      
           .main__lang__title{
             font-size: 15px;
             font-family: fantasy;
@@ -165,7 +200,37 @@ body {
             font-size: 20px;
             top: 10px;
             left: 60px;
-            color:  rgb(186, 186, 186);;
+            color:  rgb(186, 186, 186);
+          }
+          .main__lang__list{
+            position: absolute;
+            width: 160px;
+            top: 50px;
+            right: -40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: block;
+            padding: 12px 17px 10px;
+            z-index: 2;
+            text-align: left;
+            display: none;
+          }
+          .languagelist{
+            display: block;
+            color: #FFF;
+            padding: 9px 0 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            font-size: 15px;
+            position: relative;
+            text-decoration: none;
+            display: none;
+          }
+          .rightlist{
+            font-size: 20px;
+            color:  rgb(186, 186, 186);
+            right: 20px;
+            padding:  11px;
+            position: absolute;
+            display: none;
           }
 
   .main__center{
@@ -194,7 +259,7 @@ body {
         letter-spacing: .24em;
       } 
       }
-      span{
+      spa{
         padding-top: 0;
         line-height: 30px;
         font-size: 20px;

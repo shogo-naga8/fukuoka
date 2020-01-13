@@ -1,9 +1,16 @@
--# .shutter
+.shutter
 .wrapper
   .main__header
     .main__header__two
       .main__title  
-        Fukuoka Navi
+        %h1
+          %span.break-down Fuk
+          %span u
+          o
+          %span k
+          a
+          %span Na
+          vi
         .main__searchbox
           %input.inputbox{placeholder:"I'm looking for...", type:"text", value:""}/
           .button__box{type:"submit",class: "buttonbox"}
@@ -11,42 +18,27 @@
         .main__lang__title 
           jp
           = fa_icon 'angle-down',class: "list"
-          .main__lang__nav-child{:style => "opacity: 1; display: none;"}
-            .main__lang__nav-child-item
-              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "EN"
-              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "JP"
-              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "ko"
-              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "zh-CN"
-              = link_to "https://www.guidoor.jp/en/city/mishima/",class: "zh-TW"
-                
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/es/city/mishima/"}
-              -#   ES
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/fr/city/mishima/"}
-              -#   FR
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/id/city/mishima/"}
-              -#   ID
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/ko/city/mishima/"}
-              -#   KO
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/th/city/mishima/"}
-              -#   TH
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/zh-CN/city/mishima/"}
-              -#   ZH(簡体字)
-              -#   %i.icon.icon-arrow2
-              -# %a{:href => "https://www.guidoor.jp/zh-TW/city/mishima/"}
-              -#   ZH(繁体字)
-              -#   %i.icon.icon-arrow2
+          .main__lang__list
+            = fa_icon 'angle-right',class: "rightlist" 
+            = link_to "EN","#",class: "languagelist"
+
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "JP","#",class: "languagelist"
+
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "KO","#",class: "languagelist"
+
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "ZH(繁体字)","#",class: "languagelist"
+            
+            = fa_icon 'angle-right',class: "rightlist"
+            = link_to "ZH(簡体字)","#",class: "languagelist"
 
   .main__center
     .main__Lineup__view
     .main__LineupSection__header  
       .main__LineupSection__header__name
-        %span Food
+        %spa Food
     .bx__wrapper
       .bx__viewport
         .bxslider
@@ -192,7 +184,7 @@
     .main__Lineup__view
     .main__LineupSection__header  
       .main__LineupSection__header__name
-        %span tourist spot
+        %spa tourist spot
     .bx__wrapper
       .bx__viewport
         .bxslider
