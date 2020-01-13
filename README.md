@@ -1,13 +1,11 @@
 # README
-
-
-* Apprlication  
+_Apprlication_  
 fukuoka navi
 ---
-* Description  
+_Description_  
 私が紹介したい福岡のお店や観光地の紹介です。
 ---
-* Demo
+_Demo_  
 fukuoka navi Enter
 ![Alt text](/path/to/top.png)
 
@@ -15,10 +13,10 @@ fukuoka navi Enter
 
 ![Alt text](/path/to/top3.png)
 
-* 開発予定機能 
-検索機能  
-翻訳機能  
-google map API   
+_開発予定機能_  
+* 検索機能  
+* 翻訳機能  
+* google map API   
 ---
 
 
