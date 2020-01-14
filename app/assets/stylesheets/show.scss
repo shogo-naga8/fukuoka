@@ -158,7 +158,6 @@ body{
       }
       .inputbox{
         position: relative;
-        bottom: 5px;
         width: 110%;
         height: 50%;
         padding: 10px 40px 5px 8px;
@@ -173,16 +172,15 @@ body{
             position: absolute;
             width: 25px;
             height: 30%;
-            top: 28px;
+            top: 33px;
             left: 1140px;
-            z-index: 2;
             display: flex;
             align-items: center;
-            cursor: pointer;
           }
           .search{
             font-size: 20px;
-            color:  rgb(186, 186, 186);;
+            color:  rgb(186, 186, 186);
+            content: '\f002';
           } 
           .main__lang__title{
             font-size: 15px;
@@ -193,7 +191,7 @@ body{
             height: 33px;
             width: 70px;
             text-align: center;
-            top: 25px;
+            top: 28px;
           }
           .list{
             position: absolute;
@@ -201,6 +199,7 @@ body{
             top: 10px;
             left: 60px;
             color:  rgb(186, 186, 186);
+            content: '\f107';
           }
           .main__lang__list{
             position: absolute;
@@ -246,11 +245,10 @@ body{
       align-items: center;
       border-bottom: 2px solid;
       &__name{
-        min-width: 158px; 
         display: block;
         background: #000;
         padding-left: .24em;
-        padding-top: 2px;
+        padding: 2px 20px;
         color: #fff;
         line-height: 36px;
         text-transform: uppercase;
@@ -280,7 +278,8 @@ body{
               }
                 .fa-external-link-alt{
                   color:#000;
-                  font-size: 1.2em 
+                  font-size: 1.2em;
+                  content: '\f35d';
                 }
                 .fa-external-link-alt:hover{
                     color:#ff9900;
@@ -290,6 +289,7 @@ body{
                   font-size: 1.4em;
                   right: 1px;
                   font-family: "Font Awesome 5 Brands";
+                  content: '\f09a';
                 }
                 .fab_fa-facebook:hover{
                   color:#ff9900;
@@ -299,6 +299,7 @@ body{
                   font-size: 1.4em;
                   right: 1px;
                   font-family: "Font Awesome 5 Brands";
+                  content: '\f16d';
                 }
                 .fab_fa-instagram:hover{
                   color:#ff9900;
