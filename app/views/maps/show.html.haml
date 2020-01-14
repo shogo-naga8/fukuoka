@@ -304,8 +304,13 @@
         margin-right:auto;
         text-align:left;
         width:100%;
-        height:30%;
+        height:50%;
         bottom:50px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
     :css
     #map
@@ -358,6 +363,6 @@
           })(marker, i));
         }
       }
-  %script{src:"https://maps.googleapis.com/maps/api/js?sensor=true&key=#{ ENV['GOOGLE_API_KEY'] }&libraries=places&callback=initMap"}
+  %script{async:"", defer:"defer", src:"https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_API_KEY'] }&callback=initMap"}
   .main__footer 
     &copy; 2019 nagase
