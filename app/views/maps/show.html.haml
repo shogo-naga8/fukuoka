@@ -1,4 +1,4 @@
-.shutter
+-# .shutter
 .wrapper
   .main__header
     .main__header__two
@@ -363,6 +363,6 @@
           })(marker, i));
         }
       }
-  %script{async:"", defer:"defer", src:"https://maps.googleapis.com/maps/api/js?v=weekly&key=#{ENV['GOOGLE_API_KEY']}&callback=initMap"}
+  %script{src:"https://maps.googleapis.com/maps/api/js?v=weekly&key=#{ENV['GOOGLE_API_KEY']}&callback=initMap"}
   .main__footer 
     &copy; 2019 nagase
