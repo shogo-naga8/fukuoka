@@ -1,6 +1,7 @@
 # README
 _Apprlication_  
-* fukuoka navi
+* fukuoka navi  
+* http://18.177.71.112/
 ---
 _Description_  
 * 私が紹介したい福岡のお店や観光地の紹介です。
