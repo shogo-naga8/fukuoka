@@ -88,7 +88,7 @@ GEM
     ffi (1.11.3)
     font_awesome5_rails (1.0.0)
       railties (>= 4.2)
-    geocoder (1.6.0)
+    geocoder (1.6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
